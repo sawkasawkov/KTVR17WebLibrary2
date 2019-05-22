@@ -11,5 +11,6 @@
         <a href="showUsers">Список читателей</a><br>
         <a href="showTakeBooks">Список выданных книг</a>
         <a href="showTakeBookToReader">Выдать книгу</a><br>
+        <a href="showStatistic">Статистика</a><br>
  </div>       
    
