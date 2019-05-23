@@ -216,7 +216,7 @@ public class ManagerController extends HttpServlet {
                         }
                     }
                    
-                    Map<Book,Integer> sortedMapBooksRate = SortUtils.sortByValue(mapBooksRate);
+                    Map<Book,Integer> sortedMapBooksRate = SortUtils.sortMapReverseByValue(mapBooksRate);
                     request.setAttribute("sortedMapBooksRate", sortedMapBooksRate);
                 }
                 
