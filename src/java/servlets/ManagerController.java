@@ -186,7 +186,6 @@ public class ManagerController extends HttpServlet {
                             new Integer(toMonth),
                             new Integer(toDay)
                     );
-//                   
                     Date fromDate = DateUtils.getStartOfDay(DateUtils.asDate(fromLd));
                     Date toDate = DateUtils.getStartOfDay(DateUtils.asDate(toLd));
 //                    SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
@@ -209,13 +208,12 @@ public class ManagerController extends HttpServlet {
                     for (int i = 0; i < listHistories.size(); i++) {
                         History history = listHistories.get(i);
                         if(!listBooks.contains(history.getBook())){
-                            listBooks.add(history.getBook());
+                        listBooks.add(history.getBook());
                             mapBooksRate.put(history.getBook(), 1);
                         }else{
                             mapBooksRate.merge(history.getBook(), 1, Integer::sum);
                         }
                     }
-                   
                     Map<Book,Integer> sortedMapBooksRate = SortUtils.sortMapReverseByValue(mapBooksRate);
                     request.setAttribute("sortedMapBooksRate", sortedMapBooksRate);
                 }

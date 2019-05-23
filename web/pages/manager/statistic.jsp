@@ -64,7 +64,7 @@
         </c:forEach>
             <h2>Книги по популярности</h2>
             <c:forEach var="entry" items="${sortedMapBooksRate}" varStatus="count">
-            <p>${count.index+1}. "${entry.key.author}. ${entry.key.nameBook}</p>
+            <p>${count.index+1}. "${entry.key.author}. ${entry.key.nameBook} | Рейтинг ${entry.value}</p>
         </c:forEach>  
         <input type="submit" name="popBooks" value="Показать">    
        </form>    

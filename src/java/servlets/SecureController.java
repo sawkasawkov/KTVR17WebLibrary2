@@ -167,8 +167,10 @@ public class SecureController extends HttpServlet {
                 Role role = roleFacade.findRoleByName("USER");
                 UserRoles ur = new UserRoles(user, role);
                 userRolesFacade.create(ur);
-                session = request.getSession(true);
-                session.setAttribute("regUser", user);
+                if(regUser == null){
+                    session = request.getSession(true);
+                    session.setAttribute("regUser", user);
+                }
                 request.setAttribute("user", user);
                 request.getRequestDispatcher("/welcome").forward(request, response);
                 break;
