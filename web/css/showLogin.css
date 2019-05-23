@@ -13,6 +13,10 @@ h1{
 .invalid{
     border: 1px solid #f60;
 }
-.colorBack{
+body{
     background-color: antiquewhite;
+}
+input{
+    width: 300px;
+    
 }
