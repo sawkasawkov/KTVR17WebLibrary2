@@ -6,23 +6,19 @@
 package servlets;
 
 import entity.Book;
+import entity.BookCover;
+import entity.Cover;
 import entity.History;
 import entity.User;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Stream;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,7 +27,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import secure.SecureLogic;
+import session.BookCoverFacade;
 import session.BookFacade;
+import session.CoverFacade;
 import session.HistoryFacade;
 import session.RoleFacade;
 import session.UserFacade;
@@ -53,6 +51,8 @@ import utils.DateUtils;
     "/returnBook",
     "/deleteBook",
     "/showStatistic",
+    "/showUploadFile",
+
     
     
 })
@@ -62,6 +62,8 @@ public class ManagerController extends HttpServlet {
 @EJB UserFacade userFacade;
 @EJB HistoryFacade historyFacade;
 @EJB RoleFacade roleFacade;
+@EJB CoverFacade coverFacade;
+@EJB BookCoverFacade bookCoverFacade;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -92,6 +94,8 @@ public class ManagerController extends HttpServlet {
         String path = request.getServletPath();
         switch (path) {
             case "/newBook":
+                List<Cover> listCovers = coverFacade.findAll();
+                request.setAttribute("listCovers", listCovers);
                 request.getRequestDispatcher(PageReturner.getPage("newBook")).forward(request, response);
                 break;
             case "/addBook":{
@@ -100,12 +104,20 @@ public class ManagerController extends HttpServlet {
                 String yearPublished = request.getParameter("yearPublished");
                 String isbn = request.getParameter("isbn");
                 String countStr = request.getParameter("count");
+                String coverId = request.getParameter("coverId");
+                Cover cover = coverFacade.find(new Long(coverId));
                 Book book = new Book(nameBook, author, new Integer(yearPublished), isbn, new Integer(countStr));
                 bookFacade.create(book);
+                BookCover bookCover = new BookCover(book, cover);
+                bookCoverFacade.create(bookCover);
                 request.setAttribute("book", book);
                 request.getRequestDispatcher("/welcome").forward(request, response);
                     break;
                 }
+            case "/showUploadFile":
+                request.getRequestDispatcher(PageReturner.getPage("showUploadFile"))
+                        .forward(request, response);
+                break;
             case "/showUsers":
                 List<User> listUsers = userFacade.findAll();
                 request.setAttribute("listUsers", listUsers);
@@ -113,7 +125,9 @@ public class ManagerController extends HttpServlet {
                 break;
             case "/showTakeBookToReader":
                 List<Book>listBooks = bookFacade.findActived(true);
-                if(listBooks != null) request.setAttribute("listBooks", listBooks);
+                if(listBooks != null){
+                    request.setAttribute("listBooks", listBooks);
+                }
                 request.setAttribute("listUsers", userFacade.findAll());
                 request.getRequestDispatcher(PageReturner.getPage("showTakeBookToReader")).forward(request, response);
                 break;

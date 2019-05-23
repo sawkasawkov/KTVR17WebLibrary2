@@ -8,15 +8,15 @@ and open the template in the editor.
     Author     : jvm
 */
 h1{
-    color:blue;
+    color:red;
 }
 .invalid{
     border: 1px solid #f60;
 }
-body{
-    background-color: antiquewhite;
+.colorBack{
+    background-color: azure;
 }
-input{
-    width: 300px;
-    
+.coverImg{
+    width: 200px;
+    height: 250px;
 }

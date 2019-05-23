@@ -1,4 +1,13 @@
-.colorBack{
+body{
     background-color: azure;
+    font-size: 13pt;
 }
-
+input{
+    width: 20em;
+}
+H1{
+    margin: 2em 0 1em 0;
+}
+a{
+    margin: 1em 0 0 0;
+}
