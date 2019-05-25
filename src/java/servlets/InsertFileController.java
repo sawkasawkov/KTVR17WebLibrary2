@@ -25,10 +25,7 @@ import util.EncriptPass;
 import util.PageReturner;
 
 
-/**
- *
- * @author Melnikov
- */
+
 @WebServlet(name = "InsertFileController", urlPatterns = {
     "/insertFile/*",
 })

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : showChangePassword
-    Created on : May 6, 2019, 9:38:21 AM
-    Author     : Melnikov
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,12 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/newBook.css">
         <title>JSP Page</title>
     </head>
-    <body>
-        <h1>Изменение пароля</h1>
+    <body class="body"> <a href="welcome">Главная страница</a>
+       
         <p>${info}</p>
-        <form action="changePassword" method="POST">
+        <form action="changePassword" method="POST"> <h1>Изменение пароля</h1>
             <select name="userId">
                 <c:forEach var="user" items="${listUsers}">
                     <option value="${user.id}">${user.name} ${user.surname}. Логин ${user.login}</option>

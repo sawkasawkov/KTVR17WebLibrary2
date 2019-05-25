@@ -16,10 +16,6 @@ import javax.servlet.http.HttpSession;
 import secure.SecureLogic;
 import util.PageReturner;
 
-/**
- *
- * @author Melnikov
- */
 @WebServlet(name = "WelcomeController", urlPatterns = {
     "/welcome",
 

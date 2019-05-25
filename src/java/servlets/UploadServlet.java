@@ -32,10 +32,7 @@ import secure.SecureLogic;
 import session.CoverFacade;
 import util.PageReturner;
 
-/**
- *
- * @author Melnikov
- */
+
 @WebServlet(name = "UploadServlet", urlPatterns = {
     "/uploadFile"
 })

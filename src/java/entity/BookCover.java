@@ -13,10 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-/**
- *
- * @author Melnikov
- */
+
 @Entity
 public class BookCover implements Serializable {
 

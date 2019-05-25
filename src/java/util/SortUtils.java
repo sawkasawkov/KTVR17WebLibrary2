@@ -13,10 +13,6 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author Melnikov
- */
 public class SortUtils {
     //reversed sord map. return sorted LinkedHashMap
     public static <K,V extends Comparable<? super V>> Map<K,V> sortMapReverseByValue(Map<K,V> map){

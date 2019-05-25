@@ -21,10 +21,7 @@ import session.UserFacade;
 import util.EncriptPass;
 import util.PageReturner;
 
-/**
- *
- * @author Melnikov
- */
+
 @WebServlet(name = "AdminController", urlPatterns = {
     "/showChangePassword",
     "/changePassword",

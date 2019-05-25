@@ -1,8 +1,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/newUser.css">
+        <title>Новый читатель</title>
+    </head>
+    <body class="body">
          <a href="welcome">Главная страница</a>
+         
         <h1>Добавляем в библиотеку нового читателя</h1>
-        <form action="addUser" method="POST" name="form1" id="_form1">
+        <a href=""><img src="Images/kniga.jpg" alt="Библиотека"></a>
+              <form action="addUser" method="POST" name="form1" id="_form1">
+                  
              Имя:<br>
             <input type="text" name="name"><br>
              Фамилия:<br>
@@ -23,4 +33,5 @@
             <br>
             <input type="submit" value="Добавить">
         </form><br>
-   
+     </body>
+</html> 

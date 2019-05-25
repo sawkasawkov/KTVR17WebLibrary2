@@ -24,10 +24,7 @@ import session.RoleFacade;
 import session.UserFacade;
 import util.PageReturner;
 
-/**
- *
- * @author Melnikov
- */
+
 @WebServlet(name = "DirectorController", urlPatterns = {
     "/showUserRoles",
     "/changeUserRole",
@@ -117,7 +114,7 @@ public class DirectorController extends HttpServlet {
                         .forward(request, response);
                 break;
             default:
-                request.setAttribute("info", "Нет такой станицы!");
+                request.setAttribute("info", "Нет такой страницы!");
                 request.getRequestDispatcher("/welcome").forward(request, response);
                 break;
         }

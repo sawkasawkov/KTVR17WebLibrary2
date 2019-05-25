@@ -1,8 +1,4 @@
-<%-- 
-    Document   : editUserRoles
-    Created on : Nov 7, 2018, 12:35:23 PM
-    Author     : Melnikov
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,12 +6,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/newBook.css">
+        <title>Назначение ролей!</title>
     </head>
-    <body>
+    <body class="body">
         <a href="welcome">Главная страница</a>
-        <h1>Назначение ролей!</h1>
-        <form action="changeUserRole" method="POST">
+       
+        <form action="changeUserRole" method="POST"> <h1>Назначение ролей!</h1>
             <table>
                 <tr>
                     <th>Пользователь</th>

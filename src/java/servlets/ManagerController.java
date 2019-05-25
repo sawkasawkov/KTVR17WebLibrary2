@@ -37,10 +37,6 @@ import util.PageReturner;
 import util.SortUtils;
 import utils.DateUtils;
 
-/**
- *
- * @author Melnikov
- */
 @WebServlet(name = "ManagerController", urlPatterns = {
     "/newBook",
     "/addBook",

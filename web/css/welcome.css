@@ -1,13 +1,37 @@
 body{
     background-color: azure;
-    font-size: 13pt;
+    font-size: 20px;
 }
-input{
+input[type="submit"] {
+   margin-top: 35px;
+    background-color: white;
+    border: 1px solid red;
+    line-height: 0;
+    font-size: 17px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 15px ;
+    border-radius: 60px;
+    color: red;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
     width: 20em;
 }
-H1{
+р1{
     margin: 2em 0 1em 0;
 }
 a{
     margin: 1em 0 0 0;
 }
+.colorBack{margin-left: 100px;
+      background-image: url("./images/kniga.jpg");
+    
+}
+img{margin-right: 10px;
+    padding-left: 10px;
+   width: 800px;
+   height: 300px;   
+}
+

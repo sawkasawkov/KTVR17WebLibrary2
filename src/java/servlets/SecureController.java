@@ -27,10 +27,6 @@ import session.UserRolesFacade;
 import util.EncriptPass;
 import util.PageReturner;
 
-/**
- *
- * @author Melnikov
- */
 @WebServlet(loadOnStartup = 1,name = "SecureController", urlPatterns = {
     "/login",
     "/logout",

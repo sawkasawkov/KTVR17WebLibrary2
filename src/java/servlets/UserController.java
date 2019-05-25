@@ -22,10 +22,7 @@ import session.BookCoverFacade;
 import session.BookFacade;
 import util.PageReturner;
 
-/**
- *
- * @author Melnikov
- */
+
 @WebServlet(name = "UserController", urlPatterns = {
     "/showBooks",
     "/showBook",

@@ -15,10 +15,7 @@ import javax.naming.NamingException;
 import session.RoleFacade;
 import session.UserRolesFacade;
 
-/**
- *
- * @author Melnikov
- */
+
 public class SecureLogic {
     private UserRolesFacade userRolesFacade;
     private RoleFacade roleFacade;
