@@ -12,7 +12,7 @@
     </head>
     <body class="colorBack"> <a href="welcome">Главная страница</a>
       <div class="Back">
-          
+           <a href=""><img src="./images/kniga.jpg" alt=""></a>
         <h1>Добавляем в библиотеку новую книгу</h1><br>
         <a href="showUploadFile"> <h1>Загрузить изображение обложки</h1></a>
         <form action="addBook" method="POST" name="form1" onsubmit="return validate();" id="form1"><br>
@@ -24,7 +24,7 @@
             <input type="text" id="yearPublished" name="yearPublished"><br>
              ISBN:<br>
             <input type="text" id="isbn" name="isbn"><br>
-             Количество экземпрляров:<br>
+             Количество экземпляров:<br>
             <input type="text" id="count" name="count"><br>
             <br>
             <select name="coverId"><br>

@@ -10,7 +10,7 @@
          <a href="welcome">Главная страница</a>
          
         <h1>Добавляем в библиотеку нового читателя</h1>
-        <a href=""><img src="Images/kniga.jpg" alt="Библиотека"></a>
+         <a href=""><img src="./images/kniga_1.jpg" alt=""></a>
               <form action="addUser" method="POST" name="form1" id="_form1">
                   
              Имя:<br>

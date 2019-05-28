@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/welcome.css">
 <div class="colorBack">
-        <a href=""><img src="./images/kniga.jpg" alt="Библиотека"></a>
+        <a href=""><img src="./images/kniga.jpg" alt=""></a>
      <a href="welcome">Главная страница</a>
         <h1>Добро пожаловать в нашу библиотеку</h1>
         <p>${info}</p>
